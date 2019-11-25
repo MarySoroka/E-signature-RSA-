@@ -257,7 +257,7 @@ public class Main extends JFrame {
                                         if (hash[0] != hash[1]) {
                                             showResult(String.format("\nHash of message: %s\nDigital signature: %s \nDigital signature is not valid, because S != Hash(M) ", valueOf(hash[0]), valueOf(hash[1])), "Done");
                                         } else {
-                                            showResult(String.format("\nHash of message: %s\nDigital signature: %s", valueOf(hash[0]), valueOf(hash[1])), "Done");
+                                            showResult(String.format("\nHash of message: %s\nDigital signature: %s\nDigital signature is valid, because S == Hash(M)", valueOf(hash[0]), valueOf(hash[1])), "Done");
 
                                         }
                                     }
