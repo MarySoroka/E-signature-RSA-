@@ -154,8 +154,8 @@ public class Main extends JFrame {
         container.add(nameOfFile);
         JButton openFile = new JButton("Find file");
         container.add(openFile);
-        chooseAction.addItem("Encode");
-        chooseAction.addItem("Decode");
+        chooseAction.addItem("Create DS");
+        chooseAction.addItem("Check DS");
         ComboboxCheck check = new ComboboxCheck();
         chooseAction.addItemListener(check);
         container.add(chooseAction);
