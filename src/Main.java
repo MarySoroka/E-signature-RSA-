@@ -248,12 +248,12 @@ public class Main extends JFrame {
                                 RSA rsa = new RSA(p, q);
                                 switch (chooseAction.getSelectedIndex()) {
                                     case 0: {
-                                        int[] hash = rsa.encode(nameOfFile.getText(), r, D, E);
+                                        long[] hash = rsa.encode(nameOfFile.getText(), r, D, E);
                                         showResult(String.format("\nHash of message: %s\nDigital signature: %s", valueOf(hash[0]), valueOf(hash[1])), "Done");
                                     }
                                     break;
                                     case 1: {
-                                        int[] hash = rsa.decode(nameOfFile.getText(), r, E);
+                                        long[] hash = rsa.decode(nameOfFile.getText(), r, E);
                                         if (hash[0] != hash[1]) {
                                             showResult(String.format("\nHash of message: %s\nDigital signature: %s \nDigital signature is not valid, because S != Hash(M) ", valueOf(hash[0]), valueOf(hash[1])), "Done");
                                         } else {

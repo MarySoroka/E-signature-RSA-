@@ -34,11 +34,11 @@ public interface MathAlgorithm {
         return gcd(b, a%b);
     }
 
-    static int power(int a, int z, int m)
+    static long power(long a, int z, int m)
     {
-        int a1 = a;
-        int z1 = z;
-        int x = 1;
+        long a1 = a;
+        long z1 = z;
+        long x = 1;
         while (z1 != 0) {
             while(z1 % 2 == 0) {
                 z1 /= 2;
